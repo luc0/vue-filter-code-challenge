@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue code challenge</title>
+	<script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+	<div id="filter-stack">
+		
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+	<script type="text/javascript" src="assets/filterables.js"></script>
+	<script type="text/javascript" src="assets/comparison-fields.js"></script>
+	<script type="text/javascript" src="Vue.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+	<link rel="stylesheet" href="assets/reset.css">
+
+	<style type="text/css">
+		/*#d04c4c red*/
+		/*#4b7bec azul*/
+		/*#e7effd celeste*/
+		/*#f1f2f3 gris*/
+
+		body {
+			background: #f1f2f3 !important;
+			color: #212529;
+			font-family: "verdana";
+		}
+
+		/*input {
+			margin: 0 !important;
+			padding: 0 !important;
+		}*/
+
+		a {
+			text-decoration: none;
+			color: #212529;
+		}
+
+		input {
+			font-size: 16px;
+			color: #212529;
+			padding: 8px;
+			margin-left: 8px;
+			margin-top: 8px;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+		}
+
+		input[type="text"] {
+			width: 60px;
+		}
+
+		.filters {
+			display: flex;
+			background: #fff;
+			margin: 20px;
+			padding: 30px;
+			border-radius: 14px;
+			min-height: 200px;
+		}
+
+		.filter {
+			margin-right: 10px;
+			position: relative;
+			min-width: 250px;
+			cursor: pointer;
+			height: 100%;
+		}
+
+		.filter-label {
+			font-size: 18px;
+			background: #f1f2f3;
+			padding: 15px;
+			border-radius: 8px;
+		}
+
+		.filter-type {
+			font-weight: bold;
+		}
+
+		.filter-selector {
+			position: absolute;
+			top: 60px;
+			background: #fff;
+			width: 250px;
+			box-shadow: #ddd 0 0 30px -5px;
+		}
+
+		.filter-selector i {
+			margin-right: 5px;
+		}
+
+		.filter-selector a{
+			font-size: 18px;
+			padding: 8px 24px;
+			display: block;
+		}
+
+		.filter-selector a:hover{
+			background: #fafafa;
+			color: #CF000F;
+			cursor: pointer;
+		}
+
+		.btn-filter {
+			display: block;
+			color: #CF000F;
+			font-size: 18px;
+			padding: 14px;
+			position: relative;
+		}
+
+		.btn-filter:hover {
+			border-bottom: #fafafa 1px solid;
+			cursor: pointer;
+		}
+		
+		.comparator-select {
+			position: absolute;
+			background: #fff;
+			width: 210px;
+			box-shadow: #ddd 0 0 30px -5px;
+			border-radius: 8px;
+			padding-top: 20px;
+		}
+
+		.comparator-option {
+			display: flex;
+			align-items: center;
+			padding: 8px 20px;
+		}
+
+		.comparator-option input {
+			margin-right: 10px;
+		}
+
+		.comparator-option:hover {
+			background: #fafafa;
+			color: #CF000F;
+		}
+
+		.input-comparator {
+			display: flex;
+			flex-direction: column;
+			text-transform: capitalize;
+		}
+
+		.input-comparator-options {
+			border-top: 1px solid #f1f2f3;
+		}
+
+		.comparator-value {
+			width: 160px;
+			align-self: center;
+		}
+
+		.btn-warning {
+			display: block;
+			padding: 25px;
+			color: #d04c4c;
+			border-radius: 0 0 8px 8px;
+		}
+
+		.btn-warning:hover {
+			color: #fff;
+			background: #d04c4c;
+		}
+
+		.btn-warning i {
+			margin-right: 5px;
+		}
+
+		.input-comparator:first-child {
+			margin: 0;
+		}
+	</style>
+</body>
+</html>

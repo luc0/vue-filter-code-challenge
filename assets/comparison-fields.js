@@ -1,0 +1,41 @@
+const comparisonFields = {
+  'number': [
+    { id:'gt', name: 'greater than', query: 'gt' },
+    { id:'lt', name: 'less than', query: 'lt' },
+    { id:'is', name: 'is', query: 'is' },
+    { id:'not', name: 'is not', query: 'is_not' },
+    { id:'unk', name: 'is unknown', query: 'unknown' },
+    { id:'has', name: 'has any value', query: 'any' },
+  ],
+  'string': [
+    { id:'is', name: 'is', query: 'is' },
+    { id:'not', name: 'is not', query: 'is_not' },
+    { id:'starts', name: 'starts with', query: 'starts_with' },
+    { id:'ends', name: 'ends with', query: 'ends_with' },
+    { id:'contains', name: 'contains', query: 'contains' },
+    { id:'not contain', name: 'does not contain', query: 'not_contain' },
+    { id:'unk', name: 'is unknown', query: 'unknown' },
+    { id:'has', name: 'has any value', query: 'any' },
+  ],
+  'boolean': [
+    { id:'true', name: 'true', query: 'true' },
+    { id:'false', name: 'false', query: 'false' },
+  ],
+  'date': [
+    { id:'less', name: 'less than', query: 'gt_relative' },
+    { id:'more', name: 'more than', query: 'lt_relative' },
+    { id:'exactly', name: 'exactly', query: 'is_relative' },
+    { id:'after', name: 'after', query: 'gt' },
+    { id:'before', name: 'before', query: 'lt' },
+    { id:'is', name: 'is', query: 'on' },
+    { id:'unk', name: 'is unknown', query: 'unknown' },
+    { id:'has', name: 'has any value', query: 'any' },
+  ],
+  'time': [
+    { id:'after', name: 'after', query: 'gt' },
+    { id:'before', name: 'before', query: 'lt' },
+    { id:'is', name: 'is', query: 'on' },
+    { id:'unk', name: 'is unknown', query: 'unknown' },
+    { id:'has', name: 'has any value', query: 'any' },
+  ],
+}
